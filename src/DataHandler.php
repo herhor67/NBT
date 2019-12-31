@@ -91,7 +91,7 @@ class DataHandler
 		if ($this->is64bit())
 		{
 			// Workaround for PHP bug #47564 in 64-bit PHP<=5.2.9
-			$firstHalf &= 0xFFFFFFFF;
+			$firstHalf  &= 0xFFFFFFFF;
 			$secondHalf &= 0xFFFFFFFF;
 			$value = ($firstHalf << 32) | $secondHalf;
 			$value = $this->unsignedToSigned($value, 64);
