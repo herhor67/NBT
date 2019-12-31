@@ -7,8 +7,8 @@ class DataHandler
 	private $floatString = "\77\360\0\0\0\0\0\0";
 
 	/**
-	| Read a byte tag from the file.
-	| getTAGByte(resource $fPtr) : int
+	* Read a byte tag from the file.
+	* getTAGByte(resource $fPtr) : int
 	**/
 	public function getTAGByte($fPtr)
 	{
@@ -16,8 +16,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a byte tag to the file.
-	| putTAGByte(resource $fPtr, int $byte) : bool
+	* Write a byte tag to the file.
+	* putTAGByte(resource $fPtr, int $byte) : bool
 	**/
 	public function putTAGByte($fPtr, $byte)
 	{
@@ -25,8 +25,8 @@ class DataHandler
 	}
 
 	/**
-	| Read a string from the file.
-	| getTAGString(resource $fPtr) : string
+	* Read a string from the file.
+	* getTAGString(resource $fPtr) : string
 	**/
 	public function getTAGString($fPtr)
 	{
@@ -36,8 +36,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a string to the file.
-	| putTAGString(resource $fPtr, string $string) : bool
+	* Write a string to the file.
+	* putTAGString(resource $fPtr, string $string) : bool
 	**/
 	public function putTAGString($fPtr, $string)
 	{
@@ -46,8 +46,8 @@ class DataHandler
 	}
 
 	/**
-	| Read a short int from the file.
-	| getTAGShort(resource $fPtr) : int
+	* Read a short int from the file.
+	* getTAGShort(resource $fPtr) : int
 	**/
 	public function getTAGShort($fPtr)
 	{
@@ -55,8 +55,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a short int to the file.
-	| putTAGShort(resource $fPtr, int $short) : bool
+	* Write a short int to the file.
+	* putTAGShort(resource $fPtr, int $short) : bool
 	**/
 	public function putTAGShort($fPtr, $short)
 	{
@@ -64,8 +64,8 @@ class DataHandler
 	}
 
 	/**
-	| Get an int from the file.
-	| getTAGInt(resource $fPtr) : int
+	* Get an int from the file.
+	* getTAGInt(resource $fPtr) : int
 	**/
 	public function getTAGInt($fPtr)
 	{
@@ -73,8 +73,8 @@ class DataHandler
 	}
 
 	/**
-	| Write an integer to the file.
-	| putTAGInt(resource $fPtr, int $int) : bool
+	* Write an integer to the file.
+	* putTAGInt(resource $fPtr, int $int) : bool
 	**/
 	public function putTAGInt($fPtr, $int)
 	{
@@ -82,8 +82,8 @@ class DataHandler
 	}
 
 	/**
-	| Read a long int from the file.
-	| getTAGLong(resource $fPtr) : int
+	* Read a long int from the file.
+	* getTAGLong(resource $fPtr) : int
 	**/
 	public function getTAGLong($fPtr)
 	{
@@ -116,8 +116,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a long int to the file.
-	| putTAGLong(resource $fPtr, int $long) : bool
+	* Write a long int to the file.
+	* putTAGLong(resource $fPtr, int $long) : bool
 	**/
 	public function putTAGLong($fPtr, $long)
 	{
@@ -147,8 +147,8 @@ class DataHandler
 	}
 
 	/**
-	| Read a float from the file.
-	| getTAGFloat(resource $fPtr) : float
+	* Read a float from the file.
+	* getTAGFloat(resource $fPtr) : float
 	**/
 	public function getTAGFloat($fPtr)
 	{
@@ -156,8 +156,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a float to the file.
-	| putTAGFloat(resource $fPtr, float $float) : bool
+	* Write a float to the file.
+	* putTAGFloat(resource $fPtr, float $float) : bool
 	**/
 	public function putTAGFloat($fPtr, $float)
 	{
@@ -165,8 +165,8 @@ class DataHandler
 	}
 
 	/**
-	| Read a double from the file.
-	| getTAGDouble(resource $fPtr) : float
+	* Read a double from the file.
+	* getTAGDouble(resource $fPtr) : float
 	**/
 	public function getTAGDouble($fPtr)
 	{
@@ -174,8 +174,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a double to the file.
-	| putTAGDouble(resource $fPtr, float $double) : bool
+	* Write a double to the file.
+	* putTAGDouble(resource $fPtr, float $double) : bool
 	**/
 	public function putTAGDouble($fPtr, $double)
 	{
@@ -183,8 +183,8 @@ class DataHandler
 	}
 
 	/**
-	| Get a double or a float from the file.
-	| getTAGFloatDouble(resource $fPtr, string $packType, int $bytes) : float
+	* Get a double or a float from the file.
+	* getTAGFloatDouble(resource $fPtr, string $packType, int $bytes) : float
 	**/
 	private function getTAGFloatDouble($fPtr, $packType, $bytes)
 	{
@@ -193,8 +193,8 @@ class DataHandler
 	}
 
 	/**
-	| Write a double or a float to the file.
-	| putTagFloatDouble(resource $fPtr, float $value, string $packType) : bool
+	* Write a double or a float to the file.
+	* putTagFloatDouble(resource $fPtr, float $value, string $packType) : bool
 	**/
 	private function putTagFloatDouble($fPtr, $value, $packType)
 	{
@@ -202,8 +202,8 @@ class DataHandler
 	}
 
 	/**
-	| Read an array of bytes from the file.
-	| getTAGByteArray(resource $fPtr) : int[]
+	* Read an array of bytes from the file.
+	* getTAGByteArray(resource $fPtr) : int[]
 	**/
 	public function getTAGByteArray($fPtr)
 	{
@@ -215,8 +215,8 @@ class DataHandler
 	}
 
 	/**
-	| Write an array of bytes to the file.
-	| putTAGByteArray(resource $fPtr, int[] $array) : bool
+	* Write an array of bytes to the file.
+	* putTAGByteArray(resource $fPtr, int[] $array) : bool
 	**/
 	public function putTAGByteArray($fPtr, $array)
 	{
@@ -227,8 +227,8 @@ class DataHandler
 	}
 
 	/**
-	| Read an array of integers from the file.
-	| getTAGIntArray(resource $fPtr) : int[]
+	* Read an array of integers from the file.
+	* getTAGIntArray(resource $fPtr) : int[]
 	**/
 	public function getTAGIntArray($fPtr)
 	{
@@ -240,8 +240,8 @@ class DataHandler
 	}
 
 	/**
-	| Write an array of integers to the file.
-	| tagByte(resource $fPtr, int[] $array) : bool
+	* Write an array of integers to the file.
+	* tagByte(resource $fPtr, int[] $array) : bool
 	**/
 	public function putTAGIntArray($fPtr, $array)
 	{
@@ -252,8 +252,8 @@ class DataHandler
 	}
 
 	/**
-	| Read an array of longs from the file.
-	| getTAGLongArray(resource $fPtr) : int[]
+	* Read an array of longs from the file.
+	* getTAGLongArray(resource $fPtr) : int[]
 	**/
 	public function getTAGLongArray($fPtr)
 	{
@@ -265,8 +265,8 @@ class DataHandler
 	}
 
 	/**
-	| Write an array of longs to the file.
-	| tagByte(resource $fPtr, int[] $array) : bool
+	* Write an array of longs to the file.
+	* tagByte(resource $fPtr, int[] $array) : bool
 	**/
 	public function putTAGLongArray($fPtr, $array)
 	{
@@ -277,8 +277,8 @@ class DataHandler
 	}
 
 	/**
-	| Write an array to the file.
-	| putTagArray(resource $fPtr, int $array, string $packType) : bool
+	* Write an array to the file.
+	* putTagArray(resource $fPtr, int $array, string $packType) : bool
 	**/
 //	private function putTagArray($fPtr, $array, $packType)    NOT USED
 //	{
@@ -286,8 +286,8 @@ class DataHandler
 //	}
 
 	/**
-	| Convert an unsigned int to signed, if required.
-	| unsignedToSigned(int $value, int $size) : int
+	* Convert an unsigned int to signed, if required.
+	* unsignedToSigned(int $value, int $size) : int
 	**/
 	private function unsignedToSigned($value, $size)
 	{
@@ -297,8 +297,8 @@ class DataHandler
 	}
 
 	/**
-	| Convert an unsigned int to signed, if required.
-	| signedToUnsigned(int $value, int $size) : int
+	* Convert an unsigned int to signed, if required.
+	* signedToUnsigned(int $value, int $size) : int
 	**/
 	private function signedToUnsigned($value, $size)
 	{
@@ -308,8 +308,8 @@ class DataHandler
 	}
 
 	/**
-	| Check if we're on a 64 bit machine.
-	| is64bit() : bool
+	* Check if we're on a 64 bit machine.
+	* is64bit() : bool
 	**/
 	public function is64bit()
 	{
