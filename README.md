@@ -85,4 +85,4 @@ The returned format - an array - isn't ideal for creating your own NBT data, and
 
 [rickselby](//github.com/rickselby/NBT) tidied up the code a little, then added nicmart/tree to store the NBT data; after much work, it's nothing like the original, so he has pulled it into it's own (non-forked) repo.
 
-Now I ([herhor67](//herhor.net) tabbed the code, added support for TAG_Long_Array, added exception for unknown tag and changed R/W functions for arrays so that they can now accept both regular arrays and much more RAM-efficient ([SplFixedArray](//www.php.net/manual/en/class.splfixedarray.php)s. That's it.
+Now I ([herhor67](http://herhor.net)) tabbed the code, added support for TAG_Long_Array, added exception for unknown tag and changed R/W functions for arrays so that they can now accept both regular arrays and much more RAM-efficient [SplFixedArray](//www.php.net/manual/en/class.splfixedarray.php)s. That's it.
