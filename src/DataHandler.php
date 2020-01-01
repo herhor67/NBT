@@ -216,13 +216,23 @@ class DataHandler
 
 	/**
 	* Write an array of bytes to the file.
-	* putTAGByteArray(resource $fPtr, int[] $array) : bool
+	* putTAGByteArray(resource $fPtr, int[]  $array) : bool
+	* putTAGByteArray(resource $fPtr, string $array) : bool
 	**/
 	public function putTAGByteArray($fPtr, $array)
 	{
-		$result = $this->putTAGInt($fPtr, count($array));
-		for ($i = 0; $i < count($array); ++$i)
-			$result &= $this->putTAGByte($fPtr, $array[$i]);
+		if (is_string($array))
+		{
+			$result = $this->putTAGInt($fPtr, strlen($array));
+			for ($i = 0; $i < strlen($array); $i++)
+				$result &= $this->putTAGByte($fPtr, ord($array[$i]));
+		}
+		else
+		{
+			$result = $this->putTAGInt($fPtr, count($array));
+			for ($i = 0; $i < count($array); ++$i)
+				$result &= $this->putTAGByte($fPtr, $array[$i]);
+		}
 		return $result;
 	}
 
