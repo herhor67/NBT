@@ -85,4 +85,14 @@ The returned format - an array - isn't ideal for creating your own NBT data, and
 
 [rickselby](//github.com/rickselby/NBT) tidied up the code a little, then added nicmart/tree to store the NBT data; after much work, it's nothing like the original, so he has pulled it into it's own (non-forked) repo.
 
-Now I ([herhor67](http://herhor.net)) tabbed the code, added support for TAG_Long_Array, added exception for unknown tag and changed R/W functions for arrays so that they can now accept both regular arrays and much more RAM-efficient [SplFixedArray](//www.php.net/manual/en/class.splfixedarray.php)s. That's it.
+Now I ([herhor67](http://herhor.net)):
+* reformatted the code
+* added support for TAG_Long_Array
+* added exception for unknown tag
+* changed writing functions for Byte, Int and Long arrays so that they can now accept much more RAM-efficient [SplFixedArray](www.php.net/manual/en/class.splfixedarray.php)s
+* changed writing function for Byte array, so it now accepts string too.
+
+Simple comparison of ~1M elements (RAM and creation time):
+Regular int array: 52.5MB 400ms
+Int SplFixedArray: 18.9MB 540ms
+String (byte arr): 1.15MB 440ms
