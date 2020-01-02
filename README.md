@@ -92,7 +92,7 @@ Now I ([herhor67](//github.com/herhor67/NBT)):
 * changed writing functions for Byte, Int and Long arrays so that they can now accept much more RAM-efficient [SplFixedArray](//www.php.net/manual/en/class.splfixedarray.php)s
 * changed writing function for Byte array, so it now accepts string too.
 
-Simple comparison of ~1M elements (RAM and creation time):
-Regular int array: 52.5MB 400ms
-Int SplFixedArray: 18.9MB 540ms
-String (byte arr): 1.15MB 440ms
+Simple comparison of ~1M elements (RAM and creation time):  
+Regular int array: 52.5MB 400ms  
+Int SplFixedArray: 18.9MB 540ms  
+String (byte arr): 1.15MB 440ms  
